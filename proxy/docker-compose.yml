@@ -1,0 +1,17 @@
+version: '2'
+services:
+  proxy:
+    build: ./
+    networks:
+      - tongl
+      - lawrenceliu
+    ports:
+      - 80:80
+
+networks:
+  tongl:
+    external:
+      name: tongl_default
+  lawrenceliu:
+    external:
+      name: lawrenceliu_default
